@@ -1,0 +1,7 @@
+5
+5
+I C M C C
+M C M C M
+C C C C M
+M M C M M
+M M C C S

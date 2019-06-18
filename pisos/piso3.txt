@@ -1,0 +1,8 @@
+6
+2
+M M
+M B
+M C
+C C
+M C
+T C

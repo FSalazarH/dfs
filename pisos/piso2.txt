@@ -1,0 +1,9 @@
+7
+4
+M M M M
+C B C L
+M M C M
+C C C C
+M C M C
+C M M C
+M S C C
