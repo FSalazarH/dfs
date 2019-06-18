@@ -36,15 +36,15 @@ int dfs(int fila, int columna, int piso){
   }
 
   if(piso==2 && key==0){
-    printf("Estamos encontrando la llave!\n");
-    printf("\n");
-    printf("Fila:%i\n", fila);
-    printf("columna:%i\n", columna);
+    // printf("Estamos encontrando la llave!\n");
+    // printf("\n");
+    // printf("Fila:%i\n", fila);
+    // printf("columna:%i\n", columna);
     if(fila < 0 || columna < 0 || fila > filas-1 || columna > columnas-1){
       return 0;
     }
     int* actual = &visited[fila][columna];
-    printf("actual:%i\n", *actual);
+    // printf("actual:%i\n", *actual);
 
     if(*actual == llave){
       return 1;
@@ -74,7 +74,44 @@ int dfs(int fila, int columna, int piso){
   }
 
   if(piso==2 && key==1){
-    printf("Estamos encontrando la escalera para subir!\n");
+    // printf("Estamos encontrando la escalera para subir!\n");
+    // printf("\n");
+    // printf("Fila:%i\n", fila);
+    // printf("columna:%i\n", columna);
+    if(fila < 0 || columna < 0 || fila > filas-1 || columna > columnas-1){
+      return 0;
+    }
+    int* actual = &visited[fila][columna];
+    // printf("actual:%i\n", *actual);
+
+    if(*actual == escalera_subir){
+      return 1;
+    }
+
+    if(*actual == camino){
+      *actual = muro;
+      if(dfs(fila, columna-1, piso)){
+        *actual = visitado;
+        return 1;
+      }
+      if(dfs(fila+1, columna, piso)){
+        *actual = visitado;
+        return 1;
+      }
+      if(dfs(fila, columna+1, piso)){
+        *actual = visitado;
+        return 1;
+      }
+      if(dfs(fila-1, columna, piso)){
+        *actual = visitado;
+        return 1;
+      }
+    }
+    return 0;
+  }
+
+  if(piso==3){
+    printf("Estamos encontrando el tesoro!\n");
     printf("\n");
     printf("Fila:%i\n", fila);
     printf("columna:%i\n", columna);
@@ -84,7 +121,7 @@ int dfs(int fila, int columna, int piso){
     int* actual = &visited[fila][columna];
     printf("actual:%i\n", *actual);
 
-    if(*actual == escalera_subir){
+    if(*actual == tesoro){
       return 1;
     }
 

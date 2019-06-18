@@ -79,6 +79,12 @@ void get_piso(char * fileName, int piso_n){
                 }
               } 
             }
+            else if(piso_n == 3){
+              if(c == 'B'){
+                fila_inicio = i;
+                columna_inicio = j;
+              }
+            }
             
           }
         }
@@ -89,23 +95,35 @@ void get_piso(char * fileName, int piso_n){
   }
 }
 
-void set_visited(){
+void set_visited(int piso_n){
   alloc_visited();
 
   for(int i=0; i<filas; i++){
     for(int j=0; j<columnas; j++){
-      if(key == 0){
+      if(piso_n == 1){
+        if(piso[i][j] == 'I'){
+          visited[i][j] = camino; //Inicio
+          piso[i][j] = '.';
+        }
+      }
+      if(key == 0 && piso_n==2){
         if(piso[i][j] == 'I' || piso[i][j] == 'B'){
           visited[i][j] = camino; //Inicio
           piso[i][j] = '.';
         }
       }
-      if(key == 1){
+      if(key == 1 && piso_n==2){
         if(piso[i][j] == 'L'){
           visited[i][j] = camino; //Inicio
           piso[i][j] = '.';
         }
       } 
+      if(key == 1 && piso_n==3){
+        if(piso[i][j] == 'B'){
+          visited[i][j] = camino;
+          piso[i][j] = '.';
+        }
+      }
       if(piso[i][j] == 'C'){
         visited[i][j] = camino;
       }
@@ -120,6 +138,9 @@ void set_visited(){
       }
       else if(piso[i][j] == 'B'){
         visited[i][j] = escalera_bajar;
+      }
+      else if(piso[i][j] == 'T'){
+        visited[i][j] = tesoro;
       }
     }
   }
