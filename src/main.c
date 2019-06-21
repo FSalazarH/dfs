@@ -19,7 +19,7 @@ int main()
   //Imprimiendo el camino del primer piso para llegar a la escalera.
   print_piso();
   FILE * fp;
-  fp = fopen ("/output/camino.txt","w");
+  fp = fopen ("camino/camino.txt","w");
   fprintf(fp, "Ida: \n\n");
   fprintf(fp, "Piso 1: Hallando la escalera para subir al piso 2.\n\n");
   write_txt(fila_inicio, columna_inicio, piso, 'a', 'S', fp);
