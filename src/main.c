@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #include "pisos.h"
-#include "dfs.h"
+#include "busqueda.h"
 
 int main()
 {
