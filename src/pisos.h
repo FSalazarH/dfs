@@ -35,7 +35,6 @@ void alloc_visited(){
 void get_piso(char * fileName, int piso_n, int ida){
   char c; 
   int len = 0;
-
   FILE * file = fopen(fileName, "r");
 
   if (file) {
