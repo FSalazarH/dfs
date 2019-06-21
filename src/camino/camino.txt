@@ -1,0 +1,75 @@
+Ida: 
+
+Piso 1: Hallando la escalera para subir al piso 2.
+
+Me moví hacia la derecha
+Me moví hacia abajo
+Me moví hacia abajo
+Me moví hacia la derecha
+Me moví hacia abajo
+Me moví hacia abajo
+Me moví hacia la derecha
+Se ha hallado la escalera para subir al piso 2!
+
+Piso 2: Hallando la llave del tesoro
+
+Me moví hacia la derecha
+Se ha hallado la llave para el tesoro!.
+
+Piso 2: Hallando la escalera de subida hacia el piso 3.
+
+Me moví hacia la izquierda
+Me moví hacia abajo
+Me moví hacia abajo
+Me moví hacia la derecha
+Me moví hacia abajo
+Me moví hacia abajo
+Me moví hacia abajo
+Me moví hacia la izquierda
+Se ha hallado la escalera para subir al piso 3!
+
+Piso 3: Hallando el cofre del tesoro.
+
+Me moví hacia abajo
+Me moví hacia abajo
+Me moví hacia abajo
+Me moví hacia abajo
+Se ha hallado el tesoro!
+
+-------------
+Vuelta: 
+
+
+Piso 3: Hallando la escalera de bajada al piso 2.
+
+Me moví hacia la derecha
+Me moví hacia arriba
+Me moví hacia arriba
+Me moví hacia arriba
+Se ha hallado la escalera para bajar al piso 2.
+
+Piso 2: Hallando la escalera de bajada al piso 1.
+
+Me moví hacia la derecha
+Me moví hacia la derecha
+Me moví hacia arriba
+Me moví hacia arriba
+Me moví hacia arriba
+Me moví hacia la izquierda
+Me moví hacia arriba
+Me moví hacia arriba
+Se ha hallada la escalera para bajar al piso 1
+
+
+Piso 1: Hallando la salida de la torre.
+
+Me moví hacia la izquierda
+Me moví hacia la izquierda
+Me moví hacia arriba
+Me moví hacia arriba
+Me moví hacia la izquierda
+Me moví hacia arriba
+Me moví hacia arriba
+
+
+ Ha salido de la torre con el tesoro!
