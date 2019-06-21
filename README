@@ -1,1 +1,44 @@
-Describir todo..
+Nombre: Manuel Rojas Reyes
+
+Compilación: 
+
+  - Para compilar, posicionarse en la carpeta raíz del proyecto (donde se encuentra makefile) y ejecutar: 
+  
+  $ make 
+
+  El comando anterior creará dentro de la carpeta /src un ejecutable llamado lab 
+
+  Luego correr:
+
+  $ ./lab 
+
+  Y tendrá el archivo de texto generado. 
+
+Dentro de /src nos encontramos con 3 códigos:
+  * main.c
+  * busqueda.h
+  * pisos.h
+
+La lógica que se siguió fue cargar en memoria el piso actual, y se creó una matriz auxiliar (visited) la cual se utiliza para realizar comparaciones de los elementos visitados.
+Una vez cargada la matriz en memoria, se procede a realizar la Búsqueda en Profundidad, cuyo algoritmo se encuentra en el archivo busqueda.h, es un algoritmo recursivo.
+
+El archivo de texto que se genera y escribe todos los caminos que seguimos se crea en la carpeta /src/camino/camino.texto
+
+Descripción de las funciones:
+
+* pisos.h:
+  - get_piso(): Carga el piso desde el archivo de texto y llama a la función alloc_piso();
+  - alloc_piso(): Crea la matriz dinámica en memoria y asigna los valores del archivo de texto. 
+  - alloc_visited(): Se crea una matriz que se utiliza para comprobar los caminos visitados.
+  - free_memory(): Libera la memoria para tener un piso cargado a la vez.
+  - add_visited(): Va agregando "migas de pan" en la matriz para tener una visualización del camino que se encuentra mediante búsqueda en profundidad.
+  - write_txt(): Algoritmo que escribe el archivo de texto de manera recursiva. 
+
+* busqueda.h:
+  - dfs(fila, columna, objetivo): Realiza la búsqueda en profundidad, recibe:
+    - fila: fila donde comienza la búsqueda
+    - columna: columna donde comienza la búsqueda
+    - objetivo: Objetivo buscado en la matriz, criterio de parada. 
+
+Los archivos de texto se leen desde la carpeta pisos ubicada en /src. 
+
